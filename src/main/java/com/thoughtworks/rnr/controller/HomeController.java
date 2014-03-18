@@ -17,7 +17,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/")
-public class HelloController {
+public class HomeController {
 
     private final EmployeeService employeeService;
     private final SalesForceParserService salesForceParserService;
@@ -27,7 +27,7 @@ public class HelloController {
     private final PersonalDaysCalculator personalDaysCalculator;
 
     @Autowired
-    public HelloController(EmployeeService employeeService, SalesForceParserService salesForceParserService,
+    public HomeController(EmployeeService employeeService, SalesForceParserService salesForceParserService,
                           VacationCalculatorService vacationCalculatorService, AccrualRateCalculator accrualRateCalculator,
                           DateParserService dateParserService, PersonalDaysCalculator personalDaysCalculator) {
         this.employeeService = employeeService;
