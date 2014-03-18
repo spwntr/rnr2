@@ -8,9 +8,9 @@ import com.thoughtworks.rnr.model.*;
 import com.thoughtworks.rnr.service.*;
 import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Map;
@@ -43,14 +43,12 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public ModelAndView postDate(HttpServletRequest request) throws IOException, ParseException {
-
-        String rollover = request.getParameter("rolloverdays");
-        String accrualRate = request.getParameter("accrualRate");
-        String salesForceText = request.getParameter("salesForceText");
-        String startDate = request.getParameter("startDate");
-        String endDate = request.getParameter("endDate");
+    @RequestMapping(value = "/", params={"startDate", "rolloverdays", "accrualRate", "salesForceText", "endDate"}, method = RequestMethod.POST)
+    public ModelAndView postDate(@RequestParam("startDate")String startDate,
+                             @RequestParam("rolloverdays")String rollover,
+                             @RequestParam("accrualRate")String accrualRate,
+                             @RequestParam("salesForceText")String salesForceText,
+                             @RequestParam("endDate")String endDate) throws IOException, ParseException {
 
         LocalDate convertedStartDate = dateParserService.parse(startDate);
         LocalDate convertedEndDate = dateParserService.parse(endDate);
