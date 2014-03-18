@@ -1,0 +1,177 @@
+* {
+    font-family: 'Average Sans', sans-serif;
+}
+
+.header-img {
+    display: block;
+    width: 610px;
+    margin: 10px auto;
+    padding-left: 40px;
+}
+
+#page {
+    display: block;
+    width: 1000px;
+    margin: auto;
+}
+
+#right-bar, #main-section {
+    display: inline-block;
+    position: relative;
+}
+
+#right-bar {
+    width: 220px;
+    height: 80px;
+    float: left;
+    padding: 32.5px 40px 50px 40px;
+    background: #DFE9FF;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#main-section {
+    width: 580px;
+    float: left;
+    padding-top: 6px;
+}
+
+#midsection {
+    height: 200px;
+}
+
+#messages {
+    display: block;
+    margin: 0px 90px 0px auto;
+    width: 300px;
+    height: 110px;
+}
+
+#cap-message {
+    height: 35px;
+    color: red;
+}
+
+input, label {
+    display: inline-block;
+}
+
+#main-section label.error{
+    color: red;
+    display: block;
+    position: relative;
+    right: -259px;
+    width: 300px;
+}
+
+#main-section label.field-label {
+    text-align: right;
+    width: 250px;
+}
+
+#errorContainer{
+    color: red;
+    width: 400px;
+    text-align: center;
+    margin: -10px 0px 10px 150px;
+}
+
+#main-section input, #main-section textarea, #right-bar input {
+    width: 180px;
+    margin: 5px 0px 5px 4px;
+}
+
+.annotation {
+    color: #808080;
+}
+
+textarea#sales-force-text {
+    width: 184.5px;
+    height: 40px;
+    resize: none;
+}
+
+.square-button {
+    border-radius: 8px 8px 8px 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    background: white;
+    color: rgb(31,73,125);
+    border: 1px solid;
+    font-weight: normal;
+}
+
+#submit-button {
+    height: 35px;
+    color: white;
+    background: rgb(31,73,125);
+    border-radius: 8px 8px 8px 8px;
+    font-weight: bold;
+    border: none;
+    padding-bottom: 3px;
+}
+
+#sales-force-text-help {
+    padding-top: 10.7px;
+    display: inline-block;
+    padding-right: 92px;
+    float: right;
+}
+
+.sales-force-help-box {
+    position: absolute;
+    background: none repeat scroll 0% 0% rgb(238, 238, 238);
+    color: rgb(0, 0, 128);
+    width: 582px;
+    height: 324px;
+    top: 205px;
+    left: 180px;
+    z-index: 1;
+    border-radius: 10px 10px 10px 10px;
+    padding: 25px 22px 25px 50px;
+    display: none;
+}
+
+#sales-force-text-help input {
+    text-align: center;
+    font-size: 16px;
+    width: 25px;
+    height: 20px;
+}
+
+#sales-force-help-box-1 {
+    z-index: -1;
+}
+
+#sales-force-help-box-2 {
+    z-index: -2;
+}
+
+.sales-force-image {
+    width: 530px;
+    padding-top: 10px;
+}
+
+.sales-force-button {
+    float: right;
+    margin-top: 139px;
+    padding-bottom: 3px;
+}
+
+.sales-force-close-window-button {
+    margin-top: -24px;
+}
+
+.sales-force-arrow-button {
+    margin-top: -160px;
+}
+
+#sales-force-back-button {
+    padding-left: 0.5px;
+}
+
+#end-date-picker {
+    text-align: center;
+}
