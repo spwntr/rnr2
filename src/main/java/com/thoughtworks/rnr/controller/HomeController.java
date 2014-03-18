@@ -40,7 +40,7 @@ public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String get() {
-        return "hello";
+        return "home";
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
@@ -80,7 +80,7 @@ public class HomeController {
         model.put("salesForceText", salesForceText);
         model.put("capReachedMessage", capReachedMessage);
 
-        return new ModelAndView("hello", "postedValues", model);
+        return new ModelAndView("home", "postedValues", model);
     }
 
     private Double roundToNearestHundredth(Double number){
