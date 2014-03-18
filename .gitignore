@@ -12,3 +12,5 @@ atlassian-ide-plugin.xml
 .Trashes
 ethumbs.db
 Thumbs.db
+.idea/**
+*.iml
