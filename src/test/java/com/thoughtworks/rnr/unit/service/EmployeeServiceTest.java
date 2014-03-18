@@ -1,7 +1,8 @@
-package com.thoughtworks.rnr.service;
+package com.thoughtworks.rnr.unit.service;
 
 import com.thoughtworks.rnr.model.Constants;
 import com.thoughtworks.rnr.model.Employee;
+import com.thoughtworks.rnr.service.EmployeeService;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;

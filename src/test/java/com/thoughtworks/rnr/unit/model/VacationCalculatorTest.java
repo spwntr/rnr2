@@ -1,5 +1,9 @@
-package com.thoughtworks.rnr.model;
+package com.thoughtworks.rnr.unit.model;
 
+import com.thoughtworks.rnr.model.AccrualRateCalculator;
+import com.thoughtworks.rnr.model.Constants;
+import com.thoughtworks.rnr.model.Employee;
+import com.thoughtworks.rnr.model.VacationCalculator;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;

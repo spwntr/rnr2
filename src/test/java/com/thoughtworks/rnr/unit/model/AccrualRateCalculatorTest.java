@@ -1,5 +1,10 @@
-package com.thoughtworks.rnr.model;
+package com.thoughtworks.rnr.unit.model;
 
+import com.thoughtworks.rnr.model.AccrualRate;
+import com.thoughtworks.rnr.model.AccrualRateCalculator;
+import com.thoughtworks.rnr.model.Constants;
+import com.thoughtworks.rnr.model.Employee;
+import org.hamcrest.CoreMatchers;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
@@ -42,7 +47,7 @@ public class AccrualRateCalculatorTest {
 
     @Test
     public void shouldHaveAccrualRateOfFifteenDaysAfterOneYear() {
-        assertThat(accrualRateCalculator.calculateDailyAccrualRate(employee, ONE_YEAR_FROM_NOW), is(AccrualRate.LESS_THAN_THREE_YEARS.getAccrualRate() / Constants.YEAR_IN_DAYS));
+        assertThat(accrualRateCalculator.calculateDailyAccrualRate(employee, ONE_YEAR_FROM_NOW), CoreMatchers.is(AccrualRate.LESS_THAN_THREE_YEARS.getAccrualRate() / Constants.YEAR_IN_DAYS));
     }
 
     @Test
