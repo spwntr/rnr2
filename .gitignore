@@ -1,0 +1,14 @@
+*.iws
+/**/workspace.xml
+/**/tasks.xml
+target
+atlassian-ide-plugin.xml
+*.log
+*.sql
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ethumbs.db
+Thumbs.db
