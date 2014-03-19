@@ -48,7 +48,6 @@ public class HomeControllerTest {
     private String salesForceText;
     private String endDate;
 
-    private HomeController homeController;
     private final String samlRequestURL = "redirect:http://rain.okta1.com:1802/app/template_saml_2_0/k8lqGUUCIFIJHKUOGQKG/sso/saml?";
 
     @Before
