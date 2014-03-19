@@ -1,6 +1,5 @@
 package com.thoughtworks.rnr.service;
 
-import com.thoughtworks.rnr.saml.Application;
 import com.thoughtworks.rnr.saml.Configuration;
 import com.thoughtworks.rnr.saml.SAMLValidator;
 import org.springframework.beans.factory.annotation.Autowired;
