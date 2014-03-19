@@ -24,6 +24,8 @@ import static org.mockito.MockitoAnnotations.initMocks;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 public class HomeControllerTest {
+    private HomeController homeController;
+
     @Mock
     SalesForceParserService mockSalesForceParserService;
     @Mock
@@ -36,13 +38,12 @@ public class HomeControllerTest {
     DateParserService mockDateParserService;
     @Mock
     PersonalDaysCalculator mockPersonalDaysCalculator;
+
     private String startDate;
     private String rolloverDays;
     private String accrualRate;
     private String salesForceText;
     private String endDate;
-
-    private HomeController homeController;
 
     @Before
     public void setUp() throws Exception {
@@ -77,5 +78,4 @@ public class HomeControllerTest {
         verify(mockEmployeeService, times(1)).createEmployee(any(LocalDate.class), anyString(), anyMap(), anyMap(), anyString());
         verify(mockDateParserService, times(2)).parse(anyString());
     }
-
 }

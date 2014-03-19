@@ -5,6 +5,7 @@ import com.thoughtworks.rnr.model.PersonalDaysCalculator;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,11 +14,15 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.mockito.MockitoAnnotations.initMocks;
 
 public class PersonalDaysCalculatorTest {
 
     PersonalDaysCalculator personalDaysCalculator;
+
+    @Mock
     Employee mockEmployee;
+
     LocalDate beginningOf2013;
     LocalDate middleOf2013;
     LocalDate endOf2013;
@@ -28,6 +33,7 @@ public class PersonalDaysCalculatorTest {
     @Before
     public void setUp() {
         personalDaysCalculator = new PersonalDaysCalculator();
+        initMocks(this);
 
         endOf2013 = new LocalDate(2013, 12, 31);
         middleOf2013 = new LocalDate(2013, 7, 1);
@@ -39,7 +45,6 @@ public class PersonalDaysCalculatorTest {
         SOME_PERSONAL_DAYS.put(new LocalDate(2013, 2, 1), 24.0);
         SOME_PERSONAL_DAYS.put(new LocalDate(2013, 9, 1), 24.0);
 
-        mockEmployee = mock(Employee.class);
         when(mockEmployee.getPersonalDaysTaken()).thenReturn(NO_PERSONAL_DAYS);
     }
 
