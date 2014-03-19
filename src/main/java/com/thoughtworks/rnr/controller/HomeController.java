@@ -25,22 +25,27 @@ public class HomeController {
     private final AccrualRateCalculator accrualRateCalculator;
     private final DateParserService dateParserService;
     private final PersonalDaysCalculator personalDaysCalculator;
+    private SAMLService SAMLService;
 
     @Autowired
     public HomeController(EmployeeService employeeService, SalesForceParserService salesForceParserService,
                           VacationCalculatorService vacationCalculatorService, AccrualRateCalculator accrualRateCalculator,
-                          DateParserService dateParserService, PersonalDaysCalculator personalDaysCalculator) {
+                          DateParserService dateParserService, PersonalDaysCalculator personalDaysCalculator, SAMLService SAMLService) {
         this.employeeService = employeeService;
         this.salesForceParserService = salesForceParserService;
         this.vacationCalculatorService = vacationCalculatorService;
         this.accrualRateCalculator = accrualRateCalculator;
         this.dateParserService = dateParserService;
         this.personalDaysCalculator = personalDaysCalculator;
+        this.SAMLService = SAMLService;
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String get() {
-        return "home";
+    public String checkForSSO() {
+        if (SAMLService.sessionToken()) {
+            return "home";
+        }
+        return SAMLService.redirectToIDPWithSAMLRequest();
     }
 
     @RequestMapping(value = "/", params={"startDate", "rolloverdays", "accrualRate", "salesForceText", "endDate"}, method = RequestMethod.POST)
