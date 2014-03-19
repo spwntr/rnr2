@@ -44,8 +44,7 @@ public class NavigationSteps extends UserJourneyBase {
 
     @AfterStories
     public void closeBrowser() {
-//        driver.quit();
-        driver.close();
+        driver.quit();
     }
 
     @Given("I started <days> days ago")

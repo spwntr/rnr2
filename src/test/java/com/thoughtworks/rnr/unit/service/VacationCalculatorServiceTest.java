@@ -7,26 +7,29 @@ import com.thoughtworks.rnr.service.VacationCalculatorService;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.initMocks;
 
 public class VacationCalculatorServiceTest {
-
-    Employee mockEmployee;
-    AccrualRateCalculator mockAccrualRateCalculator;
-    VacationCalculator mockVacationCalculator;
     VacationCalculatorService vacationCalculatorService;
+
+    @Mock
+    Employee mockEmployee;
+    @Mock
+    AccrualRateCalculator mockAccrualRateCalculator;
+    @Mock
+    VacationCalculator mockVacationCalculator;
 
     LocalDate endDate = new LocalDate();
 
     @Before
     public void setUp(){
-        mockVacationCalculator = mock(VacationCalculator.class);
-        mockEmployee = mock(Employee.class);
-        mockAccrualRateCalculator = mock(AccrualRateCalculator.class);
+        initMocks(this);
         vacationCalculatorService = new VacationCalculatorService(mockVacationCalculator);
     }
 

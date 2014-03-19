@@ -26,6 +26,8 @@ import static org.mockito.MockitoAnnotations.initMocks;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 public class HomeControllerTest {
+    private HomeController homeController;
+
     @Mock
     SalesForceParserService mockSalesForceParserService;
     @Mock
