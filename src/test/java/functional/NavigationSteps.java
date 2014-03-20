@@ -1,4 +1,4 @@
-package com.thoughtworks.rnr.functional;
+package functional;
 
 import com.thoughtworks.rnr.model.Constants;
 import org.jbehave.core.annotations.*;

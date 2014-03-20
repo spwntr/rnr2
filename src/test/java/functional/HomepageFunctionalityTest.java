@@ -1,4 +1,4 @@
-package com.thoughtworks.rnr.functional;
+package functional;
 
 import de.codecentric.jbehave.junit.monitoring.JUnitReportingRunner;
 import org.jbehave.core.io.StoryFinder;

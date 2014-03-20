@@ -14,7 +14,7 @@ public class SAMLServiceTest {
 
     @Mock
     private Configuration mockConfiguration;
-    private SAMLService SAMLService;
+    private com.thoughtworks.rnr.service.SAMLService SAMLService;
     private SAMLValidator mockSAMLValidator;
 
     @Before

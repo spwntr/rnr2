@@ -1,9 +1,5 @@
-package com.thoughtworks.rnr.unit.model;
+package com.thoughtworks.rnr.model;
 
-import com.thoughtworks.rnr.model.AccrualRate;
-import com.thoughtworks.rnr.model.AccrualRateCalculator;
-import com.thoughtworks.rnr.model.Constants;
-import com.thoughtworks.rnr.model.Employee;
 import org.hamcrest.CoreMatchers;
 import org.joda.time.LocalDate;
 import org.junit.Before;

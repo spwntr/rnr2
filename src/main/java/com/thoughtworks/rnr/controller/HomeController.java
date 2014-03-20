@@ -48,6 +48,11 @@ public class HomeController {
         return SAMLService.redirectToIDPWithSAMLRequest();
     }
 
+//    @RequestMapping(value="redirect",method = RequestMethod.GET)
+//    public String redirectCheck() {
+//        return "redirect";
+//    }
+
     @RequestMapping(value = "/", params={"startDate", "rolloverdays", "accrualRate", "salesForceText", "endDate"}, method = RequestMethod.POST)
     public ModelAndView postDate(@RequestParam("startDate")String startDate,
                              @RequestParam("rolloverdays")String rollover,

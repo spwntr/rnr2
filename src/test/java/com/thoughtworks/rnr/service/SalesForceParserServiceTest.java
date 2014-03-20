@@ -1,8 +1,6 @@
-package com.thoughtworks.rnr.unit.service;
+package com.thoughtworks.rnr.service;
 
 import com.thoughtworks.rnr.model.Constants;
-import com.thoughtworks.rnr.service.DateParserService;
-import com.thoughtworks.rnr.service.SalesForceParserService;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;

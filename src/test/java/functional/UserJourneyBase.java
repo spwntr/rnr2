@@ -1,4 +1,4 @@
-package com.thoughtworks.rnr.functional;
+package functional;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

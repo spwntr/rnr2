@@ -1,6 +1,5 @@
-package com.thoughtworks.rnr.unit.controller;
+package com.thoughtworks.rnr.controller;
 
-import com.thoughtworks.rnr.controller.HomeController;
 import com.thoughtworks.rnr.service.SAMLService;
 import com.thoughtworks.rnr.model.AccrualRateCalculator;
 import com.thoughtworks.rnr.model.Employee;

@@ -1,6 +1,5 @@
-package com.thoughtworks.rnr.unit.service;
+package com.thoughtworks.rnr.service;
 
-import com.thoughtworks.rnr.service.DateParserService;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;

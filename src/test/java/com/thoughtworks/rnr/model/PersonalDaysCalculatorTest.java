@@ -1,7 +1,5 @@
-package com.thoughtworks.rnr.unit.model;
+package com.thoughtworks.rnr.model;
 
-import com.thoughtworks.rnr.model.Employee;
-import com.thoughtworks.rnr.model.PersonalDaysCalculator;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
