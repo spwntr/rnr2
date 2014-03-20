@@ -141,7 +141,7 @@
                     <url>${host}</url>
                     <path>/</path>
                     <username>admin</username>
-                    <password>selenium</password>
+                    <password>admin</password>
                 </configuration>
                 <executions>
                     <execution>
