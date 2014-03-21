@@ -136,18 +136,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.17</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
-                </configuration>
-                <executions>
-                    <execution></execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jettyVersion}</version>
@@ -158,7 +146,7 @@
                 <executions>
                     <execution>
                         <id>start-jetty</id>
-                        <phase>process-test-classes</phase>
+                        <phase>generate-test-resources</phase>
                         <goals>
                             <goal>run</goal>
                         </goals>
