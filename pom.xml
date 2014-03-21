@@ -112,7 +112,8 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <url>${host}</url>
+                    <url>http://localhost:8080</url>
+                    <!--<url>${host}</url>-->
                     <path>/</path>
                     <username>admin</username>
                     <password>selenium</password>
@@ -150,7 +151,8 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <url>${host}</url>
+                    <!--<url>${host}</url>-->
+                    <url>http://localhost:8080</url>
                     <path>/</path>
                     <username>admin</username>
                     <password>selenium</password>
