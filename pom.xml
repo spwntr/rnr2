@@ -108,12 +108,10 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>tomcat-maven-plugin</artifactId>
                 <configuration>
-                    <url>http://localhost:8080</url>
-                    <!--<url>${host}</url>-->
+                    <url>${host}</url>
                     <path>/</path>
                     <username>admin</username>
                     <password>selenium</password>
@@ -145,46 +143,39 @@
                         <include>**/*Test.java</include>
                     </includes>
                 </configuration>
+                <executions>
+                    <execution></execution>
+                </executions>
             </plugin>
             <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jettyVersion}</version>
                 <configuration>
-                    <!--<url>${host}</url>-->
-                    <url>http://localhost:8080</url>
-                    <path>/</path>
-                    <username>admin</username>
-                    <password>selenium</password>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9998</stopPort>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>deploy-tomcat</id>
+                        <id>start-jetty</id>
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>run</goal>
                         </goals>
+                        <configuration>
+                            <scanIntervalSeconds>0</scanIntervalSeconds>
+                            <daemon>true</daemon>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>stop-jetty</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>org.eclipse.jetty</groupId>-->
-                <!--<artifactId>jetty-maven-plugin</artifactId>-->
-                <!--<version>${jettyVersion}</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>start-jetty</id>-->
-                        <!--<phase>generate-resources</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>run</goal>-->
-                        <!--</goals>-->
-                        <!--<configuration>-->
-                            <!--<scanIntervalSeconds>0</scanIntervalSeconds>-->
-                            <!--<daemon>true</daemon>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
         </plugins>
     </build>
 </project>
