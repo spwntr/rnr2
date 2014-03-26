@@ -38,12 +38,6 @@ public class SAMLServiceTest {
     }
 
     @Test
-    public void testConfigPath() {
-        ConfigurationParser parser = new ConfigurationParser();
-        parser.parse();
-    }
-
-    @Test
     public void createSAMLRequestShouldGetRequestInfoFromConfiguration() {
         String samlRequest = SAMLService.createSAMLRequest();
         assertTrue(samlRequest.endsWith(testRequest));

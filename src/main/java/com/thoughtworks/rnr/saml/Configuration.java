@@ -6,14 +6,12 @@ import java.util.Scanner;
 
 public class Configuration {
 
+    private String authenticationURL;
+
     public Configuration(String configurationFilePath) {
 //        Scanner scanner = new Scanner(configurationFilePath);
 //        InputStream inputStream = getClass().getResourceAsStream(configurationFilePath);
 //        String fileAsString = streamToString(inputStream);
-    }
-
-    public Application getApplication() {
-        return null;
     }
 
     private String streamToString(InputStream inputStream) {
@@ -28,5 +26,9 @@ public class Configuration {
 
     public String getRequest() {
         return "";
+    }
+
+    public String getAuthenticationURL() {
+        return authenticationURL;
     }
 }

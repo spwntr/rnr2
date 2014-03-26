@@ -9,11 +9,10 @@ import javax.annotation.Resource;
 @Component
 public class ConfigurationParser {
 
-    @Autowired
-    private String configPath;
+    //TODO: make this field an autowired bean
+    private String configurationFilePath = "/src/main/java/resources/config.xml";
 
     public Configuration parse() {
-        System.out.println(configPath);
         return new Configuration("");
     }
 }
