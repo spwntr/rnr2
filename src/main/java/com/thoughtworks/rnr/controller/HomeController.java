@@ -41,11 +41,8 @@ public class HomeController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String checkForSSO() {
-        if (SAMLService.sessionToken()) {
-            return "home";
-        }
-        return SAMLService.redirectToIDPWithSAMLRequest();
+    public String displayHome() {
+        return "home";
     }
 
 //    @RequestMapping(value="redirect",method = RequestMethod.GET)

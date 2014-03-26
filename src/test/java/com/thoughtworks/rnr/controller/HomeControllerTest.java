@@ -1,13 +1,9 @@
 package com.thoughtworks.rnr.controller;
 
-import com.thoughtworks.rnr.service.SAMLService;
 import com.thoughtworks.rnr.model.AccrualRateCalculator;
 import com.thoughtworks.rnr.model.Employee;
 import com.thoughtworks.rnr.model.PersonalDaysCalculator;
-import com.thoughtworks.rnr.service.DateParserService;
-import com.thoughtworks.rnr.service.EmployeeService;
-import com.thoughtworks.rnr.service.SalesForceParserService;
-import com.thoughtworks.rnr.service.VacationCalculatorService;
+import com.thoughtworks.rnr.service.*;
 import org.joda.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,9 +14,9 @@ import java.text.ParseException;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
@@ -68,17 +64,7 @@ public class HomeControllerTest {
 
     @Test
     public void get_shouldReturnHomeView() {
-        when(mockSAMLService.sessionToken()).thenReturn(true);
-        assertThat(homeController.checkForSSO(), is("home"));
-        verify(mockSAMLService).sessionToken();
-    }
-
-    @Test
-    public void get_shouldReturnEncodedExternalRedirect() {
-        when(mockSAMLService.redirectToIDPWithSAMLRequest()).thenReturn(samlRequestURL);
-        when(mockSAMLService.sessionToken()).thenReturn(false);
-        assertThat(homeController.checkForSSO(), is(samlRequestURL));
-        verify(mockSAMLService).sessionToken();
+        assertThat(homeController.displayHome(), is("home"));
     }
 
     @Test
