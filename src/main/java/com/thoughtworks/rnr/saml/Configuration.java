@@ -6,13 +6,10 @@ import java.util.Scanner;
 
 public class Configuration {
 
-
-
     public Configuration(String configurationFilePath) {
-        Scanner scanner = new Scanner(configurationFilePath);
-        InputStream inputStream = getClass().getResourceAsStream(configurationFilePath);
-        String fileAsString = streamToString(inputStream);
-
+//        Scanner scanner = new Scanner(configurationFilePath);
+//        InputStream inputStream = getClass().getResourceAsStream(configurationFilePath);
+//        String fileAsString = streamToString(inputStream);
     }
 
     public Application getApplication() {
@@ -27,5 +24,9 @@ public class Configuration {
             e.printStackTrace();
         }
         return scanner.hasNext() ? scanner.next() : "";
+    }
+
+    public String getRequest() {
+        return "";
     }
 }

@@ -16,6 +16,10 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean id ="configPath" class="java.lang.String" factory-method="valueOf">
+        <constructor-arg value="/src/main/java/resources/config.xml"/>
+    </bean>
+
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/"/>
