@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Configuration {
 
     private String authenticationURL;
-    private String oktaId;
 
     public Configuration(String configurationFilePath) {
 //        Scanner scanner = new Scanner(configurationFilePath);
@@ -31,9 +30,5 @@ public class Configuration {
 
     public String getAuthenticationURL() {
         return authenticationURL;
-    }
-
-    public String getOktaId() {
-        return oktaId;
     }
 }
